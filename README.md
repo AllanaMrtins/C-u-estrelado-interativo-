@@ -2,7 +2,7 @@
   <img src="print/logo.png" alt="COSMOS.PIX" width="640">
 </p>
 
-<p align="center"><i>// um mapa estelar 8-bit — constelações clássicas e as suas, desenhadas quadrado por quadrado</i></p>
+<p align="center"><i>um mapa estelar 8-bit — constelações clássicas e as suas, desenhadas quadrado por quadrado</i></p>
 
 <p align="center">
   <img alt="html5" src="https://img.shields.io/badge/HTML5-05060F?style=for-the-badge&logo=html5&logoColor=FFD866">
