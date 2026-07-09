@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COSMOS.PIX — Constelações em Pixel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-stars"></canvas>
+<div class="scanlines"></div>
+
+<header class="nav">
+  <div class="nav__logo">★ COSMOS<span>.PIX</span></div>
+  <nav class="nav__links">
+    <a href="#hero">Início</a>
+    <a href="#catalogo">Constelações</a>
+    <a href="#criar">Criar</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#sobre">Sobre</a>
+  </nav>
+</header>
+
+<main>
+<section id="hero" class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">// mapa estelar 8-bit</p>
+      <h1 class="hero__title">GALÁXIA<br>EM PIXELS</h1>
+      <p class="hero__sub">Cada estrela é um quadrado. Cada constelação, uma linha de comando traçada no céu.</p>
+      <a href="#catalogo" class="btn">EXPLORAR &gt;</a>
+    </div>
+    <div class="hero__scroll">▼ role para navegar</div>
+  </section>
+<section id="catalogo" class="catalogo">
+    <h2 class="section-title"><span class="tag">01</span> CATÁLOGO ESTELAR</h2>
+    <p class="section-desc">Cinco constelações clássicas, redesenhadas quadrado por quadrado. Passe o mouse para acender a ligação.</p>
+
+    <div class="grid-cards" id="constellation-grid"></div>
+  </section>
+<section id="criar" class="criar">
+    <h2 class="section-title"><span class="tag">02</span> DESENHE A SUA</h2>
+    <p class="section-desc">Clique numa célula para acender uma estrela. Clique em outra estrela acesa para ligar as duas com uma linha pixelada.</p>
+
+    <div class="creator">
+      <canvas id="creator-canvas"></canvas>
+      <div class="creator__panel">
+        <label for="const-name">NOME DA CONSTELAÇÃO</label>
+        <input id="const-name" type="text" maxlength="24" placeholder="EX: URSA DE BOLSO">
+        <div class="creator__buttons">
+          <button id="btn-undo" class="btn btn--ghost">DESFAZER</button>
+          <button id="btn-random" class="btn btn--ghost">ALEATÓRIA</button>
+          <button id="btn-clear" class="btn btn--danger">LIMPAR</button>
+        </div>
+        <button id="btn-save" class="btn">+ ADICIONAR À GALERIA</button>
+        <p class="creator__hint" id="creator-hint">estrelas: 0 &nbsp;|&nbsp; ligações: 0</p>
+      </div>
+    </div>
+  </section>
+<section id="galeria" class="galeria">
+    <h2 class="section-title"><span class="tag">03</span> MINHAS CONSTELAÇÕES</h2>
+    <p class="section-desc">Tudo o que você adicionar fica salvo neste navegador — feche a aba e volte quando quiser que continua aqui.</p>
+
+    <p class="empty-state" id="gallery-empty">nenhuma constelação salva ainda. crie uma acima e clique em "+ adicionar à galeria".</p>
+    <div class="grid-cards" id="my-constellation-grid"></div>
+  </section>
+<section id="sobre" class="sobre">
+    <h2 class="section-title"><span class="tag">04</span> SOBRE O PROJETO</h2>
+    <p class="section-desc">
+      COSMOS.PIX transforma o céu noturno em uma grade de 8 bits. Sem fotografias, sem gradientes suaves —
+      só quadrados, linhas retas e o mesmo instinto humano de sempre: conectar pontos de luz e contar uma história com eles.
+    </p>
+    <div class="sobre__stats">
+      <div class="stat"><span class="stat__num">88</span><span class="stat__label">constelações oficiais</span></div>
+      <div class="stat"><span class="stat__num">5</span><span class="stat__label">no catálogo atual</span></div>
+      <div class="stat"><span class="stat__num">∞</span><span class="stat__label">que você pode criar</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>feito por Allana Martins © 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
